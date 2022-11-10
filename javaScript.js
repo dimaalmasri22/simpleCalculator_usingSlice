@@ -49,6 +49,7 @@ document
 document.querySelector(".equality").addEventListener("click", function (_event) {
     display1.innerHTML = eval(display1.innerText);
     nextNumberAfterResutl = true;
+    nextPoint = false;
   });
 
 //clear
