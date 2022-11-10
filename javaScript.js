@@ -54,4 +54,6 @@ document.querySelector(".equality").addEventListener("click", function (_event) 
 //clear
 document.querySelector(".clear").addEventListener("click", function (_event) {
   let x=_event.target.innerText;
-  if (x==="c"){display1.innerHTML = " ";}else{return;}});
+  if (x==="c"){display1.innerHTML = " ";}else{return;}
+  nextPoint=false;
+});
