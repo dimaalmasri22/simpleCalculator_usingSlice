@@ -2,7 +2,7 @@ let display1 = document.querySelector(".display");
 let buttons = document.getElementsByClassName("number");
 let operations = document.getElementsByClassName("operation");
 let nextNumberAfterResutl, lastOperation ;
-let firstPoint,nextPoint;
+let lastPoint;
 //numbers
 Array.from(buttons).forEach((element) => {
   element.addEventListener("click", function (number) {
@@ -37,14 +37,8 @@ Array.from(operations).forEach((element) => {
 document
   .querySelector(".decimalPoint")
   .addEventListener("click", function (_dot) {
-       firstPoint = _dot.target.innerText;
-    if (firstPoint === "." && nextPoint) {
-      return;
-    }
-    if (firstPoint === ".") {
-      nextPoint = true;
-    }
-    display1.innerHTML = display1.innerHTML + _dot.target.innerHTML;})
+    lastPoint=display1.innerText.slice(-1);
+    if (lastPoint==='.'){return;}else{display1.innerHTML = display1.innerHTML + _dot.target.innerHTML;}  })
 //equalsymbol
 document.querySelector(".equality").addEventListener("click", function (_event) {
     display1.innerHTML = eval(display1.innerText);
